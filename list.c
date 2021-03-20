@@ -55,11 +55,11 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  /*if ( list->head == NULL || list->current->next == NULL || list->current ) {
+  if ( list->head == NULL || list->current->next == NULL || list->current ) {
 
     return NULL;
 
-  }*/                 /* FALTAN ARREGLAR CONDICIONES*/
+  }                 /* FALTAN ARREGLAR CONDICIONES*/
 
   list->current = list->current->next;
 
