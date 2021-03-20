@@ -55,11 +55,11 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  if ( list->head == NULL || list->current->next == NULL || list->current ) {
+  /*if ( list->head == NULL || list->current->next == NULL || list->current ) {
 
     return NULL;
 
-  }
+  }*/                 /* FALTAN ARREGLAR CONDICIONES*/
 
   list->current = list->current->next;
 
@@ -69,13 +69,16 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
 
-  list->current = list->tail;
+  list->current = list->tail; /* FALTAN CONDICIONES*/
 
     return (void *) list->tail->data;
 }
 
 void * prevList(List * list) {
-    return NULL;
+
+  list->current = list->current->prev;
+
+    return (void *) list->current->prev;
 }
 
 void pushFront(List * list, const void * data) {
