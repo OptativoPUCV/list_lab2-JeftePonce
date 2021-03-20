@@ -78,7 +78,7 @@ void * prevList(List * list) {
 
   list->current = list->current->prev;
 
-    return (void *) list->current->prev;
+    return list->current->prev;
 }
 
 void pushFront(List * list, const void * data) {
