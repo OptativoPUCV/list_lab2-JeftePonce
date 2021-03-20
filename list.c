@@ -41,17 +41,15 @@ List * createList() {
 
 void * firstList(List * list) {
 
-  if(list->head || list->current || list->tail){
-
-    list->current = list->head;
-
-    return list->head;
-
-  } else {
+  if(list->head == NULL){
 
     return NULL;
 
   }
+
+  list->current = list->head;
+
+  return list->head;
   
 }
 
