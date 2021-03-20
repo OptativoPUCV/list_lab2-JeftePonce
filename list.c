@@ -55,6 +55,8 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
+  assert(list != NULL);
+
   if ( list->head == NULL || list->current->next == NULL || list->current ) {
 
     return NULL;
