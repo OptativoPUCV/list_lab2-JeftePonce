@@ -40,7 +40,19 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+
+  if(list->head || list->current || list->tail){
+
+    list->current = list->head;
+
+    return list->head;
+
+  } else {
+
     return NULL;
+
+  }
+  
 }
 
 void * nextList(List * list) {
